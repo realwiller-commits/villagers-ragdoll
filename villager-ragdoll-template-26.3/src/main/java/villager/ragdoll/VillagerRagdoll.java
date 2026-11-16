@@ -47,7 +47,7 @@ public class VillagerRagdoll implements ModInitializer {
 			Vec3 look = player.getLookAngle();
 			v.setNoAi(true);
 			v.setDeltaMovement(look.x * 1.6, look.y * 1.6 + 0.4, look.z * 1.6);
-			v.hurtMarked = true;
+			v.needsSync = true;
 			THROWN.add(new Thrown(v));
 			level.playSound(null, v.blockPosition(), SoundEvents.VILLAGER_HURT, SoundSource.NEUTRAL, 1f, 1f);
 			return InteractionResult.SUCCESS;
