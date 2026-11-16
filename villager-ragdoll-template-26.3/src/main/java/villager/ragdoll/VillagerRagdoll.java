@@ -78,7 +78,7 @@ public class VillagerRagdoll implements ModInitializer {
 						blood(level, v, 25);
 						level.playSound(null, v.blockPosition(), SoundEvents.VILLAGER_HURT, SoundSource.NEUTRAL, 1f, 0.8f);
 						v.setDeltaMovement(t.lastVel.x * 0.4, speed * 0.5, t.lastVel.z * 0.4);
-						v.hurtMarked = true;
+						v.needsSync = true;
 						t.bounces++;
 					} else {
 						v.setNoAi(false);
